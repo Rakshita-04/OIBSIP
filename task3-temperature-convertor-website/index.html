@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="icon" type="image/png" href="photo.png"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="top-bar">
+        <div class="icon">🌡️</div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+      <h1>Temperature Converter</h1>
+      <p>Convert between Celsius, Fahrenheit, and Kelvin</p>
+    </header>
+
+    <section class="card">
+      <h2>Convert Temperature</h2>
+      <p class="description">Enter a temperature value and select the input unit to convert.</p>
+
+      <div class="form">
+        <div class="form-group">
+          <label for="temperature">Temperature Value</label>
+          <input type="number" id="temperature" placeholder="Enter temperature">
+        </div>
+        <div class="form-group">
+          <label for="unit">Input Unit</label>
+          <select id="unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <button id="convertBtn">Convert Temperature</button>
+
+      <div id="results" class="results hidden">
+        <h3>Conversion Results</h3>
+        <div class="result-grid">
+          <div class="result-box">
+            <div id="celsiusResult" class="value">--</div>
+            <div class="label">Celsius</div>
+          </div>
+          <div class="result-box">
+            <div id="fahrenheitResult" class="value">--</div>
+            <div class="label">Fahrenheit</div>
+          </div>
+          <div class="result-box">
+            <div id="kelvinResult" class="value">--</div>
+            <div class="label">Kelvin</div>
+          </div>
+        </div>
+        <p id="inputInfo" class="info"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Formulas:</p>
+      <p>°F = (°C × 9/5) + 32 | °C = (°F - 32) × 5/9 | K = °C + 273.15</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
